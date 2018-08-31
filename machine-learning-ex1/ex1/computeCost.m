@@ -13,11 +13,9 @@ J = 0;
 % Instructions: Compute the cost of a particular choice of theta
 %               You should set J to the cost.
 
-for i=1:m
-
-j=j+power(((theta(1,1)+(theta(2,1)*X(i,2)))-y(i,1)),2);
-
-endfor
+i=1:m
+j=sum(power(((theta(1)+(theta(2)*X(i,2)))-y(i)),2));
+  
 J=j*(1/(2*m));
 % =========================================================================
 return
